@@ -1,12 +1,14 @@
 //packages
+import react from "react"
 
 //local imports
+import Navbar from './components/Navbar.jsx'
 
 function App() {
 
   return (
     <>
-      <h1>Hello world</h1>
+      <Navbar/>
     </>
   )
 }
