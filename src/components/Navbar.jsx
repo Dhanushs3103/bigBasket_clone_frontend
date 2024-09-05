@@ -6,13 +6,14 @@ import { FaCompass } from "react-icons/fa";
 import { FaBasketShopping } from "react-icons/fa6";
 import { GoTriangleDown } from "react-icons/go";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import { Menu,MenuButton,MenuList,MenuItem } from "@chakra-ui/react";
+import { useState } from "react";
 
 //local imports
 import "../App.css";
-
 export default function Navbar() {
   return (
-    <div style={{ margin:'10px', width:"100%",boxShadow: "rgba(0, 0, 0, 0.04) 0px 3px 5px"}}>
+    <div style={{width:"100%",boxShadow: "rgba(0, 0, 0, 0.04) 0px 3px 5px"}}>
       {/* Navbar top */}
       <div id="Navbar-top">
         <img
@@ -42,8 +43,23 @@ export default function Navbar() {
        <Text style={{fontWeight:379, fontSize:"15px", width:'fit-content'}} className="navBotText">Ghee</Text>
        <Text style={{fontWeight:379, fontSize:"15px", width:'fit-content'}} className="navBotText">Nandini</Text>
        <div style={{display:'flex', gap:'10px', alignItems:'center'}}>
-       <Text style={{fontWeight:379, fontSize:"15px", width:'fit-content'}} className="navBotText">Fresh Vegetable</Text>
-       <FaAngleDoubleRight />
+       <Text style={{fontWeight:379, fontSize:"15px", width:'fit-content', paddingRight:'30px'}} className="navBotText">Fresh Vegetable</Text>
+       {/* menu icon */}
+       <Menu>
+          <MenuButton>
+            <FaAngleDoubleRight  color="#D63333" />
+          </MenuButton>
+         <MenuList style={{ zIndex: 9999, position: "absolute" }}>
+           <MenuItem className="navBotText">Milk</MenuItem>
+           <MenuItem className="navBotText">Yogurt & Shirkhand</MenuItem>
+           <MenuItem className="navBotText">Chocolates</MenuItem>
+           <MenuItem className="navBotText">Cup Noodles</MenuItem>
+           <MenuItem className="navBotText">Hair care</MenuItem>
+           <MenuItem className="navBotText">Fresh Chicken</MenuItem>
+           <MenuItem className="navBotText">eggs</MenuItem>
+           <MenuItem className="navBotText">Honey</MenuItem>
+        </MenuList>
+       </Menu>
        </div>
        <img src="https://www.bigbasket.com/media/uploads/banner_images/Smart_basket-250124-1.png" alt="smartBaskets" />
        <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt="offers" />

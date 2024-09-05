@@ -1,8 +1,9 @@
 /* -----------------Navbar start----------------- */
 
-body{
+body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Navbar-top */
@@ -37,7 +38,7 @@ body{
 
 /* searchInput */
 #searchInput {
-    color: #dad5d5;
+    color: #383838;
     outline: none;
     border: none;
     padding: 5px;
@@ -110,4 +111,35 @@ body{
     color: #D63333;
 }
 
+/* menuIcon */
+#menuIcon:active {
+    background-color: #76B900;
+    color: #D63333 !important;
+}
+
+.swiper-container {
+    z-index: 1; /* Lower z-index for slider */
+  }
+
 /* -----------------Navbar End----------------- */
+
+/* ----------------best-sellers start------------- */
+#addToCart:hover {
+  background-color: #CC0000 !important;
+  color: white !important;
+}
+
+/* ----------------best-sellers end--------------- */
+
+/* -----------------Footer start---------------- */
+
+.footerP {
+    width: fit-content;
+}
+
+.footerP:hover {
+   cursor: pointer;
+   text-decoration: underline #ffffff !important;
+}
+
+/* -----------------Footer end----------------- */
